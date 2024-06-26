@@ -1,6 +1,6 @@
-# Final Project
+Klangrum - Musik och Design
 
-Replace this readme with your own information about your project.
+Recreating a website for Klangrum for my Portfolio.
 
 Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 

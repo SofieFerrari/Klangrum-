@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-import withMT from "@material-tailwind/react/utils/withMT"
+import withMT from "@material-tailwind/react/utils/withMT";
 
 export default withMT({
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -16,8 +16,10 @@ export default withMT({
     colors: {
       blue: "#3D52A0",
       dirtWhite: "#fcfeff",
+      gray: "#A4A5A9",
+      yellow: "#FFF16D",
+      lightYellow: "#FFF16D",
     },
   },
   plugins: [],
 });
-

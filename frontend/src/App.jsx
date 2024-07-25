@@ -1,9 +1,11 @@
-import { Header } from "./components/Header"
+import { Header } from "./components/Hero"
+import { Navbar } from "./components/Navbar";
 
 export const App = () => {
   return (
     <>
-    <Header/>
+    <Header />
+    <Navbar />
     </>
   );
 };

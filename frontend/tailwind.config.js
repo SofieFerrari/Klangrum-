@@ -17,7 +17,7 @@ export default withMT({
       blue: "#3D52A0",
       dirtWhite: "#fcfeff",
       gray: "#A4A5A9",
-      yellow: "#FFF16D",
+      yellow: "#fcf758",
       lightYellow: "#FFF16D",
     },
   },

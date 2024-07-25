@@ -10,41 +10,44 @@ export const Navbar = () => {
 
   return (
     <>
-      <section className="flex h-[350px] flex-col bg-yellow">
+      <section className="flex h-auto flex-col bg-lightYellow">
         <button onClick={handleMenuToggle} className="m-2 w-8 self-end">
           <img src={hamburger} alt="navbar" />
         </button>
         {menuIsOpen && (
-          <nav className="mr-2 flex w-44 self-end border-8 border-white bg-yellow">
+          <nav className="flex self-center border-[20px] border-white bg-yellow">
             <ul className="list-none p-4">
               <li>
-                <a href="#architecture" className="block px-4 py-2">
+                <a href="#architecture" className="block pb-6">
                   Architecture & Design
                 </a>
               </li>
               <li>
-                <a href="#illustrations" className="block px-4 py-2">
+                <a href="#illustrations" className="block pb-6">
                   Illustrations
                 </a>
               </li>
               <li>
-                <a href="#music" className="block px-4 py-2">
+                <a href="#music" className="block pb-6">
                   Music
                 </a>
               </li>
               <li>
-                <a href="#events" className="block px-4 py-2">
+                <a href="#events" className="block pb-6">
                   Events
                 </a>
               </li>
               <li>
-                <a href="#about" className="block px-4 py-2">
+                <a href="#about" className="pb-6">
                   About Me
                 </a>
               </li>
             </ul>
           </nav>
         )}
+        <div className="self-center p-7">
+          "Architecture is frozen Music" - Goethe
+        </div>
       </section>
     </>
   );

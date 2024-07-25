@@ -1,20 +1,33 @@
 {
-  "name": "project-final-backend",
-  "version": "1.0.0",
-  "description": "Server part of final project",
-  "scripts": {
-    "start": "babel-node server.js",
-    "dev": "nodemon server.js --exec babel-node"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@babel/core": "^7.17.9",
-    "@babel/node": "^7.16.8",
-    "@babel/preset-env": "^7.16.11",
-    "cors": "^2.8.5",
-    "express": "^4.17.3",
-    "mongoose": "^8.4.0",
-    "nodemon": "^3.0.1"
-  }
+	"name": "project-final-backend",
+	"description": "Client part of final project",
+	"version": "1.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"@material-tailwind/react": "^2.1.9",
+		"autoprefixer": "^10.4.19",
+		"postcss": "^8.4.38",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-router-dom": "^6.24.0",
+		"tailwindcss": "^3.4.4"
+	},
+	"devDependencies": {
+		"@types/react": "^18.2.15",
+		"@types/react-dom": "^18.2.7",
+		"@vitejs/plugin-react": "^4.0.3",
+		"eslint": "^8.45.0",
+		"eslint-plugin-react": "^7.32.2",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-plugin-react-refresh": "^0.4.3",
+		"prettier": "^3.3.2",
+		"prettier-plugin-tailwindcss": "^0.6.5",
+		"vite": "^4.5.3"
+	}
 }

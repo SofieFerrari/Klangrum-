@@ -10,7 +10,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <section className="flex h-auto flex-col bg-lightYellow">
+      <section className="flex h-auto flex-col bg-yellow">
         <button onClick={handleMenuToggle} className="m-2 w-8 self-end">
           <img src={hamburger} alt="navbar" />
         </button>
@@ -45,7 +45,7 @@ export const Navbar = () => {
             </ul>
           </nav>
         )}
-        <div className="self-center p-7">
+        <div className="self-center text-xl p-7">
           "Architecture is frozen Music" - Goethe
         </div>
       </section>

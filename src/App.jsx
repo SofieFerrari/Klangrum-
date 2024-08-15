@@ -1,9 +1,10 @@
+import React from "react";
 import { Header } from "./components/Hero";
 import { Navbar } from "./components/Navbar";
 import { Contact } from "./components/Contact";
 import { Services } from "./components/Services";
 
-export const App = () => {
+const App = () => {
   return (
     <>
       <Header />
@@ -13,3 +14,5 @@ export const App = () => {
     </>
   );
 };
+
+export default App;

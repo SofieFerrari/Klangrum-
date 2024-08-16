@@ -1,7 +1,7 @@
 // import { useState } from "react";
 
-import logo from "../assets/images/klangrumlogga.svg";
-import headerPic from "../assets/images/fanny_hemtext.jpeg";
+import logo from "../assets/images/Klangrumlogga.svg";
+import headerPic from "../assets/images/fanny_hemtex.jpeg";
 // import hamburger from "../assets/images/burger.svg";
 
 export const Header = () => {

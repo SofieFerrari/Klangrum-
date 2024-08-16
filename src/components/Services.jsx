@@ -5,7 +5,7 @@ import events from "../assets/images/fanny_dans.jpeg";
 
 export const Services = () => {
   return (
-    <section className="relative flex h-auto flex-col bg-gray font-montserrat font-bold">
+    <section className="relative flex h-auto flex-col pt-4 bg-gray gap-4 font-montserrat font-bold">
       <div className="relative mt-3 w-11/12 self-center">
         <img
           src={architerture}

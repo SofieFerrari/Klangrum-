@@ -11,13 +11,13 @@ export const Navbar = () => {
 
   return (
     <>
-      <section className="bg-yellowTransparent flex flex-row justify-between p-3 font-montserrat hover:bg-yellow">
+      <section className="bg-yellowTransparent relative flex flex-row justify-between p-3 font-montserrat hover:bg-yellow">
         <div className="text-3xl font-bold tracking-widest">KlangRum</div>
-        <button onClick={handleMenuToggle} className="w-8">
+        <button onClick={handleMenuToggle} className="absolute right-3 w-8">
           <img src={hamburger} alt="navbar" />
         </button>
         {menuIsOpen && (
-          <nav className="flex border-[20px] border-white">
+          <nav className="relative top-full right-10 flex border-[20px] border-white">
             <ul className="list-none p-4">
               <li>
                 <a href="#architecture" className="block pb-6">

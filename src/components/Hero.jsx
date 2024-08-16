@@ -1,63 +1,21 @@
-// import { useState } from "react";
-
 import logo from "../assets/images/Klangrumlogga.svg";
 import headerPic from "../assets/images/fanny_hemtex.jpeg";
+import { Navbar } from "./Navbar";
 // import hamburger from "../assets/images/burger.svg";
 
-export const Header = () => {
-  // const [menuIsOpen, setMenuIsOpen] = useState(false);
-  // const handleMenuToggle = () => {
-  //   setMenuIsOpen(!menuIsOpen);
-  // };
-
+export const Header = ({ Navbar }) => {
   return (
     <>
       <header className="relative flex w-full flex-col items-center">
         <img src={headerPic} className="relative h-auto w-full object-cover" />
+        {Navbar}
         <img
           src={logo}
-          className="absolute left-1/2 top-1/2 w-32 -translate-x-1/2 -translate-y-1/2 transform md:left-4 md:top-4 md:w-24 md:translate-x-0 md:translate-y-0 lg:left-4 lg:top-4 lg:w-24"
+          className="absolute left-1/2 top-1/2 w-20 -translate-x-1/2 -translate-y-1/2 transform md:left-4 md:top-4 md:w-24 md:translate-x-0 md:translate-y-0 lg:left-4 lg:top-4 lg:w-24"
         />
-        <div className=" absolute text-xl">
-          "I see music as fluid architecture - Joni Mitchell
+        <div className="absolute bottom-0 m-1 whitespace-pre-line bg-white bg-opacity-60 text-left font-montserrat text-sm font-extralight text-black md:m-12 md:bg-opacity-60 md:p-4 md:text-2xl md:font-light lg:bottom-20 lg:left-1/2 lg:top-1/2 lg:ml-2 lg:box-border lg:h-[200px] lg:w-[900px] lg:-translate-x-1/2 lg:-translate-y-1/2 lg:transform lg:pl-16 lg:text-5xl lg:font-light lg:leading-relaxed">
+          {`"I see music as fluid architecture"\n - Joni Mitchell`}
         </div>
-        {/* <button
-          onClick={handleMenuToggle}
-          className="absolute right-4 top-4 w-5 sm:flex sm:flex-col sm:justify-center md:w-8"
-        >
-          <img src={hamburger} />
-        </button>
-        {menuIsOpen && (
-          <nav className="absolute right-2 top-16 z-20 w-44 border-8 border-white bg-yellow">
-            <ul className="list-none p-4">
-              <li>
-                <a href="#architecture" className="block px-4 py-2">
-                  Architecture & Design
-                </a>
-              </li>
-              <li>
-                <a href="#illustrations" className="block px-4 py-2">
-                  Illustrations
-                </a>
-              </li>
-              <li>
-                <a href="#music" className="block px-4 py-2">
-                  Music
-                </a>
-              </li>
-              <li>
-                <a href="#events" className="block px-4 py-2">
-                  Events
-                </a>
-              </li>
-              <li>
-                <a href="#about" className="block px-4 py-2">
-                  About Me
-                </a>
-              </li>
-            </ul>
-          </nav>
-        )} */}
       </header>
     </>
   );

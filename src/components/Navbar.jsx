@@ -11,11 +11,9 @@ export const Navbar = () => {
 
   return (
     <>
-      <section className="flex flex-row p-3 justify-between bg-yellowTransparent font-montserrat">
-        <div className="font-bold tracking-widest text-3xl">
-          KlangRum
-        </div>
-        <button onClick={handleMenuToggle} className=" w-8">
+      <section className="bg-yellowTransparent flex flex-row justify-between p-3 font-montserrat hover:bg-yellow">
+        <div className="text-3xl font-bold tracking-widest">KlangRum</div>
+        <button onClick={handleMenuToggle} className="w-8">
           <img src={hamburger} alt="navbar" />
         </button>
         {menuIsOpen && (
@@ -55,5 +53,5 @@ export const Navbar = () => {
 };
 
 Navbar.protoTypes = {
-  text: PropTypes.string
-}
+  text: PropTypes.string,
+};

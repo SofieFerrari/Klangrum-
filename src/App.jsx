@@ -7,8 +7,8 @@ import { Services } from "./components/Services";
 const App = () => {
   return (
     <>
-      <Header />
       <Navbar />
+      <Header />
       <Services />
       <Contact />
     </>

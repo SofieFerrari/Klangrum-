@@ -46,7 +46,7 @@ export const Navbar = () => {
           </nav>
         )}
         <div className="self-start text-xl p-7">
-          "Architecture is frozen Music" - Goethe
+          "I see music as fluid architecture - Joni Mitchell
         </div>
       </section>
     </>

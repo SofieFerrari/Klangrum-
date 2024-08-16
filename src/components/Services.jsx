@@ -1,6 +1,6 @@
 import architerture from "../assets/images/fanny-ark.jpeg";
 import music from "../assets/images/fanny_event.jpeg";
-import illustrations from "../assets/images/fanny_illustrations.jpeg";
+import illustrations from "../assets/images/fanny_illustrations.png";
 import events from "../assets/images/fanny_dans.jpeg";
 
 export const Services = () => {

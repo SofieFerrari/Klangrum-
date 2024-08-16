@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useState } from "react";
 import hamburger from "../assets/images/burger.svg";
 
@@ -52,3 +53,7 @@ export const Navbar = () => {
     </>
   );
 };
+
+Navbar.protoTypes = {
+  text: PropTypes.string
+}

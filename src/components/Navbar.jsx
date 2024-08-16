@@ -17,7 +17,7 @@ export const Navbar = () => {
           <img src={hamburger} alt="navbar" />
         </button>
         {menuIsOpen && (
-          <nav className="flex self-center border-[20px] border-white">
+          <nav className="flex border-[20px] border-white">
             <ul className="list-none p-4">
               <li>
                 <a href="#architecture" className="block pb-6">

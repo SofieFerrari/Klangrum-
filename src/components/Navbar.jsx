@@ -11,12 +11,15 @@ export const Navbar = () => {
 
   return (
     <>
-      <section className="flex h-auto flex-col bg-yellow">
-        <button onClick={handleMenuToggle} className="m-2 w-8 self-end">
+      <section className="flex flex-row p-3 justify-between bg-yellowTransparent font-montserrat">
+        <div className="font-bold tracking-widest text-3xl">
+          KlangRum
+        </div>
+        <button onClick={handleMenuToggle} className=" w-8">
           <img src={hamburger} alt="navbar" />
         </button>
         {menuIsOpen && (
-          <nav className="flex self-center border-[20px] border-white bg-yellow">
+          <nav className="flex self-center border-[20px] border-white">
             <ul className="list-none p-4">
               <li>
                 <a href="#architecture" className="block pb-6">
@@ -46,9 +49,6 @@ export const Navbar = () => {
             </ul>
           </nav>
         )}
-        <div className="self-start text-xl p-7">
-          "I see music as fluid architecture - Joni Mitchell
-        </div>
       </section>
     </>
   );

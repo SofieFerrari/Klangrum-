@@ -5,14 +5,14 @@ import events from "../assets/images/fanny_dans.jpeg";
 
 export const Services = () => {
   return (
-    <section className="relative mb-5 flex h-auto flex-col bg-gray">
+    <section className="relative flex h-auto flex-col bg-gray font-montserrat font-bold">
       <div className="relative mt-3 w-11/12 self-center">
         <img
           src={architerture}
           alt="Architecture"
           className="h-[200px] w-full rounded-md object-cover"
         />
-        <h1 className="absolute inset-0 flex items-center justify-center text-3xl text-black">
+        <h1 className="absolute left-1/2 top-1/2 box-border -translate-x-1/2 -translate-y-1/2 transform bg-white bg-opacity-70 p-2 text-3xl text-black">
           Architecture
         </h1>
       </div>
@@ -20,9 +20,9 @@ export const Services = () => {
         <img
           src={music}
           alt="Music"
-          className="h-[200px] w-full object-cover"
+          className="h-[200px] w-full rounded-md object-cover"
         />
-        <h1 className="absolute inset-0 flex items-center justify-center text-3xl text-white">
+        <h1 className="absolute left-1/2 top-1/2 box-border -translate-x-1/2 -translate-y-1/2 transform bg-white bg-opacity-70 p-2 text-3xl text-black">
           Music
         </h1>
       </div>
@@ -30,9 +30,9 @@ export const Services = () => {
         <img
           src={illustrations}
           alt="Illustrations"
-          className="h-[200px] w-full object-cover"
+          className="h-[200px] w-full rounded-md object-cover"
         />
-        <h1 className="absolute inset-0 flex items-center justify-center text-3xl text-black">
+        <h1 className="absolute left-1/2 top-1/2 box-border -translate-x-1/2 -translate-y-1/2 transform bg-white bg-opacity-70 p-2 text-3xl text-black">
           Illustrations
         </h1>
       </div>
@@ -40,9 +40,9 @@ export const Services = () => {
         <img
           src={events}
           alt="Events"
-          className="h-[200px] w-full object-cover"
+          className="mb-5 h-[200px] w-full rounded-md object-cover"
         />
-        <h1 className="absolute inset-0 flex items-center justify-center text-3xl text-white">
+        <h1 className="absolute left-1/2 top-1/2 box-border -translate-x-1/2 -translate-y-1/2 transform bg-white bg-opacity-70 p-2 text-3xl text-black">
           Events
         </h1>
       </div>

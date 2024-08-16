@@ -18,6 +18,9 @@ export const Header = () => {
           src={logo}
           className="absolute left-1/2 top-1/2 w-32 -translate-x-1/2 -translate-y-1/2 transform md:left-4 md:top-4 md:w-24 md:translate-x-0 md:translate-y-0 lg:left-4 lg:top-4 lg:w-24"
         />
+        <div className=" absolute text-xl">
+          "I see music as fluid architecture - Joni Mitchell
+        </div>
         {/* <button
           onClick={handleMenuToggle}
           className="absolute right-4 top-4 w-5 sm:flex sm:flex-col sm:justify-center md:w-8"

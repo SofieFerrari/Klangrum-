@@ -19,6 +19,7 @@ export default withMT({
       gray: "#e5e5e5",
       yellow: "#fcf758",
       lightYellow: "#FFF16D",
+      yellowTransparent: "rgba(252, 247, 88, 0.7)",
     },
   },
   plugins: [],

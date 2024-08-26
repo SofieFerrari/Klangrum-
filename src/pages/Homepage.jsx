@@ -1,17 +1,15 @@
-import { Navbar } from "../components/Navbar";
-import { Header } from "../components/Header";
+
+import { Hero } from "../components/Hero";
 import { Services } from "../components/Services";
-import { Carousel } from "../components/Carousel"
-import { Contact } from "../components/Contact"
+import { Carousel } from "../components/Carousel";
+
 
 export const Homepage = () => {
   return (
     <>
-      <Navbar />
-      <Header />
+      <Hero />
       <Services />
       <Carousel />
-      <Contact />
     </>
   );
 };

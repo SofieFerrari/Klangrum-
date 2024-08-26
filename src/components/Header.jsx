@@ -1,22 +1,53 @@
-import logo from "../assets/images/Klangrumlogga.svg";
-import headerPic from "../assets/images/fanny_hemtex.jpeg";
-import { Navbar } from "./Navbar";
-// import hamburger from "../assets/images/burger.svg";
+import PropTypes from "prop-types";
+import { useState } from "react";
+import hamburger from "../assets/images/burger.svg";
+import { useNavigate } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
-export const Header = ({ Navbar }) => {
+const navigation = [
+  { name: "Home", to: "/" },
+  { name: "Architecture & Design", to: "/architecture" },
+  { name: "Illustrations", to: "/illustrations" },
+  { name: "Music", to: "/music" },
+  { name: "Events", to: "/events" },
+  { name: "About Me", to: "/about-me" },
+];
+
+export const Header = () => {
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleMenuToggle = () => {
+    setMenuIsOpen(!menuIsOpen);
+  };
+
   return (
     <>
-      <header className="relative flex w-full flex-col items-center">
-        <img src={headerPic} className="relative h-auto w-full object-cover" />
-        {Navbar}
-        <img
-          src={logo}
-          className="absolute left-1/2 bottom-8 w-24 -translate-x-1/2 -translate-y-1/2 transform md:left-4 md:top-4 md:w-24 md:translate-x-0 md:translate-y-0 lg:left-4 lg:top-4 lg:w-24"
-        />
-        <div className="absolute p-2 bottom-1 m-1 whitespace-pre-line bg-white bg-opacity-60 text-left font-montserrat text-sm font-normal text-black md:m-12 md:bg-opacity-60 md:p-4 md:text-2xl md:font-light lg:bottom-20 lg:left-1/2 lg:top-1/2 lg:ml-2 lg:box-border lg:h-[200px] lg:w-[900px] lg:-translate-x-1/2 lg:-translate-y-1/2 lg:transform lg:pl-16 lg:text-5xl lg:font-normal lg:leading-relaxed">
-          {`"I see music as fluid architecture"\n - Joni Mitchell`}
-        </div>
-      </header>
+      <section className="bg-yellowTransparent relative flex flex-row justify-between p-3 font-montserrat hover:bg-yellow">
+        <Link to="/">
+          <div className="font-bold tracking-widest sm:text-lg md:text-3xl">
+            KlangRum
+          </div>
+        </Link>
+        <button onClick={handleMenuToggle} className="absolute right-4 w-9">
+          <img src={hamburger} alt="navbar" />
+        </button>
+        {menuIsOpen && (
+          <nav className="relative right-10 top-full mt-1 flex max-w-[140px] border-[2px] border-black">
+            <ul className="list-none p-4">
+              {navigation.map((item) => (
+                <NavLink key={item.name} to={item.to} className="block pb-6">
+                  {item.name}
+                </NavLink>
+              ))}
+            </ul>
+          </nav>
+        )}
+      </section>
     </>
   );
+};
+
+Header.propTypes = {
+  text: PropTypes.string,
 };

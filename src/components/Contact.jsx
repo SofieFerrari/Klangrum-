@@ -17,7 +17,7 @@ export const Contact = () => {
           className="my-8 h-40 w-40 self-center rounded-full"
         />
         {/* <Link to="/about"> */}
-        <h1 className="mb-4 text-center text-3xl font-semibold">About me</h1>
+        <h1 className="mb-4 text-center text-3xl font-semibold">Contact me</h1>
         {/* </Link> */}
         <div className="mx-4 mb-20 flex-wrap text-center text-xl font-medium leading-8">
           <p>KLANG-RUM</p>

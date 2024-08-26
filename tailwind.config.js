@@ -5,6 +5,7 @@ export default withMT({
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     screens: {
+      sm: "310px",
       md: "768px",
       lg: "1024px",
     },

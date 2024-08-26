@@ -17,7 +17,7 @@ export const Navbar = () => {
           <img src={hamburger} alt="navbar" />
         </button>
         {menuIsOpen && (
-          <nav className="relative top-full right-10 flex border-[20px] border-white">
+          <nav className="relative top-full mt-1 right-10 flex border-[2px] border-black">
             <ul className="list-none p-4">
               <li>
                 <a href="#architecture" className="block pb-6">

@@ -26,9 +26,9 @@ export const Carousel = () => {
 
   return (
     <section className="bg-gray py-5">
-      <div className="rounded relative mx-auto w-full max-w-xl">
+      <div className="relative mx-auto w-full max-w-xl">
         <img
-          src={items[index].src} className="h-[500px] rounded-md object-cover"
+          src={items[index].src} className="max-h-[500px] px-2 object-cover"
         />
         <button
           className="absolute left-4 top-1/2 w-8 -translate-y-1/2 transform rounded-full bg-white hover:scale-75"

@@ -14,7 +14,7 @@ export const Footer = () => {
       <section className="bg-yellowTransparent flex flex-col font-montserrat hover:bg-yellow">
         <img
           src={profile}
-          className="my-8 h-40 w-40 self-center rounded-full"
+          className="my-8 h-40 w-40 border-4 self-center rounded-full"
         />
         {/* <Link to="/about"> */}
         <h1 className="mb-4 text-center text-3xl font-semibold">Contact me</h1>

@@ -1,18 +1,15 @@
 import React, { useState } from "react";
-import fisk from "../assets/images/fanny-fisk.svg";
-import ill from "../assets/images/fanny_illustrations.png";
-import dans from "../assets/images/fanny_dans.jpeg";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-const items = [
-  { src: fisk, alt: "fisk" },
-  { src: ill, alt: "illustration" },
-  { src: dans, alt: "dans" },
+const quotes = [
+  { text: `"Fannys' creativity is mindblowing"` },
+  { text: `"Klangrum helped me pick a fantastic blue color for my livingroom, I am amazed how well she knows color"`},
+  { text: `"Working with Fanny has really made me step out of my comfort zone and this is truely where the magic happens!"`},
 ];
 
 export const Carousel = () => {
   const [index, setIndex] = useState(0);
-  const length = items.length;
+  const length = quotes.length;
 
   const handlePrevious = () => {
     const newIndex = index - 1;
@@ -26,20 +23,14 @@ export const Carousel = () => {
 
   return (
     <section className="bg-gray py-5">
-      <div className="relative mx-auto w-full max-w-xl">
-        <img
-          src={items[index].src} className="max-h-[500px] px-2 object-cover"
-        />
-        <button
-          className="absolute left-4 top-1/2 w-8 -translate-y-1/2 transform rounded-full bg-white hover:scale-75"
-          onClick={handlePrevious}
-        >
+      <div className="relative mx-10 flex flex-col">
+        <p className="text-3xl font-montserrat text-blue flex justify-center text-center p-10 flex-wrap font-bold tracking-wide mx-16">
+          {quotes[index].text}
+        </p>
+        <button className="flex justify-start" onClick={handlePrevious}>
           <IoIosArrowBack className="h-8 w-8" />
         </button>
-        <button
-          className="absolute right-4 top-1/2 w-8 -translate-y-1/2 transform rounded-full bg-white hover:scale-75"
-          onClick={handleNext}
-        >
+        <button className="flex justify-end" onClick={handleNext}>
           <IoIosArrowForward className="h-8 w-8" />
         </button>
       </div>

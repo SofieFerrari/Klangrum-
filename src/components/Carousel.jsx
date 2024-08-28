@@ -24,15 +24,17 @@ export const Carousel = () => {
   return (
     <section className="bg-gray py-5">
       <div className="relative mx-10 flex flex-col">
-        <p className="text-3xl font-montserrat text-blue flex justify-center text-center p-10 flex-wrap font-bold tracking-wide mx-16">
+        <p className="mx-16 flex flex-wrap justify-center p-10 text-center mb-5 text-white font-montserrat text-3xl font-bold tracking-wide">
           {quotes[index].text}
         </p>
-        <button className="flex justify-start" onClick={handlePrevious}>
-          <IoIosArrowBack className="h-8 w-8" />
-        </button>
-        <button className="flex justify-end" onClick={handleNext}>
-          <IoIosArrowForward className="h-8 w-8" />
-        </button>
+        <div className="flex justify-between mx-10 flex-row">
+          <button className="" onClick={handlePrevious}>
+            <IoIosArrowBack className="h-8 w-8" />
+          </button>
+          <button className="" onClick={handleNext}>
+            <IoIosArrowForward className="h-8 w-8" />
+          </button>
+        </div>
       </div>
     </section>
   );

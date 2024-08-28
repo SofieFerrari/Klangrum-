@@ -6,18 +6,8 @@ import illustrations from "../assets/images/fanny_illustrations.png";
 import events from "../assets/images/fanny_dans.jpeg";
 
 const navigation = [
-  {
-    name: "Architecture & Design",
-    to: "/architecture",
-    img: architerture,
-    alt: "Architecture",
-  },
-  {
-    name: "Illustrations",
-    to: "/illustrations",
-    img: illustrations,
-    alt: "Illustrations",
-  },
+  { name: "Architecture & Design", to: "/architecture", img: architerture, alt: "Architecture" },
+  { name: "Illustrations", to: "/illustrations", img: illustrations, alt: "Illustrations" },
   { name: "Music", to: "/music", img: music, alt: "Music" },
   { name: "Events", to: "/events", img: events, alt: "Events" },
 ];

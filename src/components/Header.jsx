@@ -23,17 +23,17 @@ export const Header = () => {
 
   return (
     <>
-      <section className="bg-yellowTransparent relative flex flex-row justify-between p-3 font-montserrat hover:bg-yellow">
+      <section className="bg-white relative flex flex-row justify-between p-3 font-montserrat hover:bg-yellow">
         <Link to="/">
           <div className="font-bold tracking-widest sm:text-lg md:text-3xl">
-            KlangRum
+            KLANG-RUM
           </div>
         </Link>
         <button onClick={handleMenuToggle} className="absolute right-4 w-9">
           <img src={hamburger} alt="navbar" />
         </button>
         {menuIsOpen && (
-          <nav className="relative right-10 top-full mt-1 flex max-w-[140px] border-[2px] border-black">
+          <nav className="lg:right-12 max-w-[140px] text-right relative right-10 top-full mt-1 flex  tracking-wide">
             <ul className="list-none p-4">
               {navigation.map((item) => (
                 <NavLink key={item.name} to={item.to} className="block pb-6">

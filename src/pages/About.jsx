@@ -1,9 +1,19 @@
+import { FaInstagram } from "react-icons/fa";
+import { CiLinkedin } from "react-icons/ci";
+import { FiFacebook } from "react-icons/fi";
+
+const linkedin = "https://www.linkedin.com/in/fanny-chandra-skr%C3%B6der/";
+const instagram = "https://www.instagram.com/skroder.chandra.fanny/";
+const facebook = "https://www.facebook.com/fanny.skroder/?locale=sv_SE";
+
 export const About = () => {
   return (
     <>
-      <div className="bg-gray flex flex-col p-8 font-montserrat">
-        <h1 className="text-3xl text-white font-bold tracking-widest text-right m-10">FANNY CHANDRA SKRÖDER</h1>
-        <p className="self-center tracking-wide text-right text-lg mx-10 mb-20 w-auto">
+      <div className="flex flex-col bg-gray p-8 font-montserrat">
+        <h1 className="m-10 text-right text-3xl font-bold tracking-widest text-white">
+          FANNY CHANDRA SKRÖDER
+        </h1>
+        <p className="mx-10 mb-10 w-auto self-center text-right text-lg tracking-wide">
           As an Interior Designer/Architect with 4 years of work experience, I
           have mainly worked with store interiors and offices at the interior
           design side. I have established a good ability to create selling rooms
@@ -17,6 +27,14 @@ export const About = () => {
           pop/jazz/folk bands and been singing in different choirs.
         </p>
       </div>
+      <div className="flex flex-col bg-gray pb-10 pr-14 text-right font-montserrat">
+        <p className="text-md tracking-wide text-white">View my resume</p>
+        <a href={linkedin}>
+          <button className="font-bold text-white hover:scale-125 hover:text-black">
+            <CiLinkedin className="h-12 w-12" />
+          </button>
+        </a>
+      </div>
     </>
   );
-}
+};

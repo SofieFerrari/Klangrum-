@@ -11,7 +11,7 @@ const facebook = "https://www.facebook.com/fanny.skroder/?locale=sv_SE";
 export const Footer = () => {
   return (
     <>
-      <section className="bg-yellowTransparent flex flex-col font-montserrat hover:bg-yellow">
+      <section className="bg-white flex flex-col font-montserrat hover:bg-yellow">
         <img
           src={profile}
           className="my-8 h-40 w-40 border-4 self-center rounded-full"

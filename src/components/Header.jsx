@@ -21,9 +21,13 @@ export const Header = () => {
     setMenuIsOpen(!menuIsOpen);
   };
 
+  const handleMenuItemClick = () => {
+    setMenuIsOpen(false);
+  };
+
   return (
     <>
-      <section className="bg-white relative flex flex-row justify-between p-3 font-montserrat hover:bg-yellow">
+      <section className="relative flex flex-row justify-between bg-white p-3 font-montserrat hover:bg-yellow">
         <Link to="/">
           <div className="font-bold tracking-widest sm:text-lg md:text-3xl">
             KLANG-RUM
@@ -33,10 +37,15 @@ export const Header = () => {
           <img src={hamburger} alt="navbar" />
         </button>
         {menuIsOpen && (
-          <nav className="lg:right-12 max-w-[140px] text-right relative right-10 top-full mt-1 flex  tracking-wide">
+          <nav className="relative right-10 top-full mt-1 flex max-w-[140px] text-right tracking-wide lg:right-12">
             <ul className="list-none p-4">
               {navigation.map((item) => (
-                <NavLink key={item.name} to={item.to} className="block pb-6">
+                <NavLink
+                  key={item.name}
+                  to={item.to}
+                  onClick={handleMenuItemClick}
+                  className="block pb-6"
+                >
                   {item.name}
                 </NavLink>
               ))}

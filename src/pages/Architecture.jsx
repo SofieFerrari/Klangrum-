@@ -1,4 +1,4 @@
-import architecht from "../data/architectureData.json";
+import architecht from "../data/ArchitectureData.json";
 
 export const Architecture = () => {
   return (

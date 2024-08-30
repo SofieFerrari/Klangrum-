@@ -7,8 +7,8 @@ export const FirstPageVideo = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigate("/");
-    }, 5000);
+      navigate("/home");
+    }, 14000);
 
     return () => clearTimeout(timer);
   }, [navigate]);

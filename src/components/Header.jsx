@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
-import hamburger from "../assets/images/burger.svg";
+import hamburger from "/images/burger.svg";
 import { useNavigate } from "react-router-dom";
 import { Link, NavLink } from "react-router-dom";
 

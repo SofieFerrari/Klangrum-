@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { FaInstagram } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 import { FiFacebook } from "react-icons/fi";
-import profile from "../assets/images/fannyprofil.jpeg";
+import profile from "/images/fannyprofil.jpeg";
 
 const linkedin = "https://www.linkedin.com/in/fanny-chandra-skr%C3%B6der/";
 const instagram = "https://www.instagram.com/skroder.chandra.fanny/";

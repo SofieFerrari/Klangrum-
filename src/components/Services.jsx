@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
 
-import architerture from "../assets/images/fanny-ark.jpeg";
-import music from "../assets/images/fanny_event.jpeg";
-import illustrations from "../assets/images/fanny_illustrations.png";
-import events from "../assets/images/fanny_dans.jpeg";
+import architerture from "/images/fanny-ark.jpeg";
+import music from "/images/fanny_event.jpeg";
+import illustrations from "/images/fanny_illustrations.png";
+import events from "/images/fanny_dans.jpeg";
 
 const navigation = [
   { name: "Architecture & Design", to: "/architecture", img: architerture, alt: "Architecture" },

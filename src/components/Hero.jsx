@@ -1,5 +1,5 @@
-import logo from "../assets/images/klangrumlogga.svg";
-import headerPic from "../assets/images/fanny_hemtex.jpeg";
+import logo from "/images/klangrumlogga.svg";
+import headerPic from "/images/fanny_hemtex.jpeg";
 
 export const Hero = ({ Navbar }) => {
   return (

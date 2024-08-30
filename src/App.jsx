@@ -1,24 +1,28 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { BackToTop } from "./components/BackToTop";
 import { Header } from "./components/Header";
-import { AppRoutes } from "./routes/AppRoutes";
 import { Footer } from "./components/Footer";
-// import { Breadcrumbs } from "./components/Breadcrumbs";
-// import { BackButton } from "./components/BackButton"
+import { AppRoutes } from "./routes/AppRoutes";
+import { FirstPageVideo } from "./components/FirstPageVideo";
+
+const Layout = () => (
+  <>
+    <Header />
+    <BackToTop />
+    <AppRoutes />
+    <Footer />
+  </>
+);
 
 const App = () => {
   return (
-    <>
-      <BrowserRouter>
-        <BackToTop />
-        <Header />
-        {/* <BackButton /> */}
-        {/* <Breadcrumbs /> */}
-        <AppRoutes />
-        <Footer />
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<FirstPageVideo />} />
+        <Route path="/*" element={<Layout />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

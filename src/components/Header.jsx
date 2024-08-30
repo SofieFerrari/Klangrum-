@@ -29,7 +29,7 @@ export const Header = () => {
   return (
     <>
       <section className="relative flex flex-row justify-between bg-white p-3 font-montserrat hover:bg-yellow">
-        <Link to="/">
+        <Link to="/home">
           <div className="flex flex-row gap-2">
             <img src={logo} className="w-8" />
             <h1 className="font-bold tracking-widest text-3xl">

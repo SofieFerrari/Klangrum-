@@ -25,8 +25,9 @@ export const Music = () => {
         <h1 className="m-10 text-right text-3xl font-bold tracking-widest text-white">
           Music
         </h1>
+        <hr className="mb-10 border-t-2 border-white" />
         {videos.map((video, index) => (
-          <div className="mb-8 flex flex-col" key={index}>
+          <div className="mb-10 flex flex-col" key={index}>
             <h2 className="mb-2 text-left text-2xl font-semibold text-white">
               {video.name}
             </h2>
@@ -41,6 +42,7 @@ export const Music = () => {
             </div>
           </div>
         ))}
+        <hr className="mb-10 border-t-2 border-white" />
       </div>
     </>
   );

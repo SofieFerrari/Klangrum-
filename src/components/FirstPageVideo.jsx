@@ -13,9 +13,12 @@ export const FirstPageVideo = () => {
     return () => clearTimeout(timer);
   }, [navigate]);
 
-  const handleClick = () => {
+const handleClick = () => {
+  setTimeout(() => {
     navigate("/home");
-  };
+  }, 2000);
+};
+
 
   return (
     <>

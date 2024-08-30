@@ -19,7 +19,7 @@ export const Footer = () => {
         {/* <Link to="/about"> */}
         <h1 className="mb-4 text-center text-3xl font-semibold">CONTACT ME</h1>
         {/* </Link> */}
-        <div className="mx-4 mb-20 flex-wrap text-center text-xl font-medium leading-8">
+        <div className="mx-4 mb-10 flex-wrap text-center text-xl font-medium leading-8">
           <p>KLANG-RUM</p>
           <p>Fanny Skröder</p>
           <p>Porsmossevägen 1C 141 37 HUDDINGE</p>

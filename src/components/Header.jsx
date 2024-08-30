@@ -32,16 +32,16 @@ export const Header = () => {
         <Link to="/">
           <div className="flex flex-row gap-2">
             <img src={logo} className="w-8" />
-            <h1 className="font-bold tracking-widest sm:text-lg md:text-3xl">
+            <h1 className="font-bold tracking-widest text-3xl">
               KLANG-RUM
             </h1>
           </div>
         </Link>
-        <button onClick={handleMenuToggle} className="absolute right-4 w-9">
+        <button onClick={handleMenuToggle} className="absolute right-2 w-9">
           <img src={hamburger} alt="navbar" />
         </button>
         {menuIsOpen && (
-          <nav className="relative right-10 top-full mt-1 flex max-w-[140px] text-right tracking-wide lg:right-12">
+          <nav className="relative font-medium right-10 top-full mt-1 flex max-w-[140px] text-right tracking-wide lg:right-12">
             <ul className="list-none p-4">
               {navigation.map((item) => (
                 <NavLink

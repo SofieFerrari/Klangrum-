@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import video from "/images/fannyvidlag.mp4"; // Importera videon
+import video from "/images/fannyvidlag.mp4";
 
 export const FirstPageVideo = () => {
   const navigate = useNavigate();
@@ -29,7 +29,7 @@ const handleClick = () => {
         </video>
         <button
           onClick={handleClick}
-          className="absolute z-10 hover:text-white cursor-pointer font-montserrat text-5xl font-bold text-white/55"
+          className="absolute z-10 cursor-pointer font-montserrat text-5xl font-bold text-white/55 hover:text-white"
         >
           KLANG-RUM
         </button>

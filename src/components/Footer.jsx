@@ -2,6 +2,7 @@ import { FaInstagram } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 import { FiFacebook } from "react-icons/fi";
 import profile from "/images/fannyprofil.jpeg";
+import logga from "/images/Klangrumlogga.svg";
 
 const linkedin = "https://www.linkedin.com/in/fanny-chandra-skr%C3%B6der/";
 const instagram = "https://www.instagram.com/skroder.chandra.fanny/";
@@ -10,13 +11,10 @@ const email = "mailto:Skroder.fanny@gmail.com";
 
 export const Footer = () => {
   return (
-    <section className="flex flex-col bg-white font-montserrat hover:bg-yellow">
-      <img
-        src={profile}
-        className="my-8 h-40 w-40 self-center rounded-full border-4"
-      />
+    <section className="flex flex-col bg-white font-montserrat">
+      <img src={logga} className="my-8 h-40 w-40 self-center" />
       <a href={email}>
-        <h1 className="mb-4 text-center text-3xl font-semibold">CONTACT ME</h1>
+        <h1 className="mb-4 text-center text-3xl font-semibold">CONTACT</h1>
       </a>
       <div className="mx-4 mb-10 flex-wrap text-center text-xl font-medium leading-8">
         <p>KLANG-RUM</p>

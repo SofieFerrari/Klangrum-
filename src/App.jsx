@@ -1,20 +1,29 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
-import { BackToTop } from "./components/BackToTop";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { FirstPage } from "./pages/FirstPage"
+import { BackToTop } from "./components/BackToTop"
 import { Header } from "./components/Header";
 import { AppRoutes } from "./routes/AppRoutes";
 import { Footer } from "./components/Footer";
 
 const App = () => {
   return (
-    <>
-      <BrowserRouter>
-        <BackToTop />
-        <Header />
-        <AppRoutes />
-        <Footer />
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<FirstPage />} />
+        <Route
+          path="/*"
+          element={
+            <>
+              <BackToTop />
+              <Header />
+              <AppRoutes />
+              <Footer />
+            </>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

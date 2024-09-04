@@ -1,5 +1,6 @@
 import profile from "/images/fannyprofil.jpeg";
 import { CiLinkedin } from "react-icons/ci";
+import { Breadcrumbs } from "../components/Breadcrumbs"
 
 const linkedin = "https://www.linkedin.com/in/fanny-chandra-skr%C3%B6der/";
 const instagram = "https://www.instagram.com/skroder.chandra.fanny/";
@@ -12,9 +13,9 @@ export const About = () => {
         <h1 className="m-10 text-right text-3xl font-bold tracking-widest text-white">
           FANNY CHANDRA SKRÖDER
         </h1>
-        <hr className="mb-10 border-t-2 border-white" />
+        <Breadcrumbs />
         <div className="flex flex-col md:flex-row md:justify-evenly">
-          <p className="mx-10 mb-10 min-w-[300px] md:self-start self-center lg:self-start whitespace-pre-line t md:text-left text-sm tracking-wide md:text-lg">
+          <p className="t mx-10 mb-10 min-w-[300px] self-center whitespace-pre-line text-sm tracking-wide md:self-start md:text-left md:text-lg lg:self-start">
             {`As an Interior Designer/Architect with 4 years of work experience, I
           have mainly worked with store interiors and offices at the interior
           design side. I have established a good ability to create selling rooms
@@ -29,7 +30,7 @@ export const About = () => {
           </p>
           <img
             src={profile}
-            className="md:h-[300px] md:w-[300px] sm:h-[200px] sm:w-[200px] mb-10 md:mt-12 self-center rounded-full border-4"
+            className="mb-10 self-center rounded-full border-4 sm:h-[200px] sm:w-[200px] md:mt-12 md:h-[300px] md:w-[300px]"
           />
         </div>
         <hr className="mb-10 border-t-2 border-white" />

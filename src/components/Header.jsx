@@ -3,7 +3,7 @@ import { useState } from "react";
 import hamburger from "/images/burger.svg";
 import { useNavigate } from "react-router-dom";
 import { Link, NavLink } from "react-router-dom";
-// import logo from "/images/Klangrumlogga.svg";
+import logo from "/images/klanglogga.svg";
 
 const navigation = [
   { name: "Home", to: "/home" },
@@ -31,7 +31,7 @@ export const Header = () => {
       <section className="relative flex flex-row justify-between bg-white p-3 font-montserrat hover:bg-yellow">
         <Link to="/home">
           <div className="flex flex-row gap-2">
-            {/* <img src={logo} className="w-8" /> */}
+            <img src={logo} className="w-8" />
             <h1 className="font-bold tracking-widest text-3xl">
               KLANG-RUM
             </h1>

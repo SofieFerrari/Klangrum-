@@ -36,8 +36,8 @@ export const Carousel = () => {
         >
           <IoIosArrowBack className="h-8 w-8" />
         </button>
-        <div className="relative flex h-48 items-center justify-center">
-          <p className="mx-16 mb-5 whitespace-pre-line p-10 text-center font-montserrat text-2xl font-bold italic tracking-wide text-black/70">
+        <div className="relative flex h-52 items-center justify-center">
+          <p className="mx-16 mb-5 whitespace-pre-line p-10 text-center font-montserrat text-sm md:text-2xl lg:text-2xl font-bold italic tracking-wide text-black/70">
             {quotes[index].text}
           </p>
         </div>

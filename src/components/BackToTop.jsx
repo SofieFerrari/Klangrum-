@@ -19,14 +19,16 @@ export const BackToTop = () => {
   };
 
   return (
-    isVisible && (
-      <button
-        onClick={scrollToTop}
-        className="fixed bottom-8 right-8 cursor-pointer whitespace-pre-line rounded-full border border-black bg-yellow p-4 text-xs text-black"
-        aria-label="Scroll to top"
-      >
-        {`Back\n to top`}
-      </button>
-    )
+    <>
+      {isVisible && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-4 right-4 z-50 cursor-pointer whitespace-pre-line rounded-full border border-black bg-yellow p-3 text-xs font-light text-black shadow-lg"
+          aria-label="Scroll to top"
+        >
+          {`Back\n to top`}
+        </button>
+      )}
+    </>
   );
 };

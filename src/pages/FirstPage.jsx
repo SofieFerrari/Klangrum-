@@ -14,14 +14,12 @@ export const FirstPage = () => {
   }, [navigate]);
 
   const handleClick = () => {
-    setTimeout(() => {
-      navigate("/home");
-    }, 2000);
+    navigate("/home");
   };
 
   return (
     <>
-      <div className="relative flex h-screen sm:flex-col items-center justify-start md:justify-end lg:justify-end">
+      <div className="relative flex h-screen items-center justify-start sm:flex-col md:justify-end lg:justify-end">
         <div className="absolute md:left-6 md:top-10 lg:left-6 lg:top-10 lg:p-4">
           <button
             onClick={handleClick}

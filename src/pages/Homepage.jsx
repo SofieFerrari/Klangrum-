@@ -2,14 +2,14 @@
 import { Hero } from "../components/Hero";
 import { Services } from "../components/Services";
 import { Carousel } from "../components/Carousel";
-import { Introtext } from "../components/Introtext"
+import { Quote } from "../components/IntroQuote"
 
 
 export const Homepage = () => {
   return (
     <>
       <Hero />
-      <Introtext />
+      <Quote />
       <Services />
       <Carousel />
     </>

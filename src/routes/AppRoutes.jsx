@@ -10,7 +10,7 @@ import { Music } from "../pages/Music";
 export const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/home" element={<Homepage />} />
+      <Route path="/" element={<Homepage />} />
       <Route path="/architecture" element={<Architecture />} />
       <Route path="/illustrations" element={<Illustrations />} />
       <Route path="/music" element={<Music />} />

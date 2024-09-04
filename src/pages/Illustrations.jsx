@@ -1,4 +1,5 @@
 import imageData from "../data/Illustrations.json"
+import { Breadcrumbs } from "../components/Breadcrumbs";
 
 export const Illustrations = () => {
   return (
@@ -7,7 +8,7 @@ export const Illustrations = () => {
         <h1 className="m-10 text-right text-3xl font-bold tracking-widest text-white">
           Illustrations
         </h1>
-        <hr className="mb-10 border-t-2 border-white" />
+        <Breadcrumbs />
         <ul className="mx-auto mb-10 w-auto self-center text-left tracking-wide">
           {imageData.map((data, index) => (
             <li className="mb-10 flex flex-col" key={index}>

@@ -1,4 +1,5 @@
 import eventData from "../data/EventData.json";
+import { Breadcrumbs } from "../components/Breadcrumbs";
 
 export const Events = () => {
   return (
@@ -7,7 +8,7 @@ export const Events = () => {
         <h1 className="m-10 text-right text-3xl font-bold tracking-widest text-white">
           Events
         </h1>
-        <hr className="mb-10 border-t-2 border-white" />
+        <Breadcrumbs />
         <p className="mx-10 mb-3 w-auto text-left font-semibold tracking-wide">
           Previous events
         </p>

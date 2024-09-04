@@ -8,9 +8,7 @@ export const Architecture = () => {
         <h1 className="m-10 text-right text-3xl font-bold tracking-widest text-white">
           Architecture and Design
         </h1>
-        <hr className="border-t-2 border-white" />
         <Breadcrumbs />
-        <hr className="mb-10 border-t-2 border-white" />
         <p className="lg:tect-lg mx-5 mt-10 mb-20 max-w-[1100px] self-end text-center text-sm tracking-wide md:text-right md:text-lg lg:text-right">
           Architecture Consultant Interior, Housing, Retail, Office, Workshops
           As an architect I have mostly worked with building permits, office

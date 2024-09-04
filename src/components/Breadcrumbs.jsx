@@ -21,7 +21,7 @@ export const Breadcrumbs = () => {
         aria-label="breadcrumb"
         className="invisible p-2 md:visible lg:visible"
       >
-        <ol className="flex items-center space-x-2 text-sm text-black/70">
+        <ol className="flex items-center space-x-2 text-sm pb-2 text-black/70">
           {pathnames.length === 0 ? (
             <li>
               <Link to="/home" className="font-semibold hover:text-black/35">
@@ -47,10 +47,10 @@ export const Breadcrumbs = () => {
                     {!isLast && (
                       <>
                         <li className="flex items-center">
-                          <span className="text-gray-400 mx-2">/</span>
+                          <span className="mx-2">/</span>
                           <Link
                             to={href}
-                            className="text-blue-600 hover:text-blue-800 font-semibold"
+                            className="font-semibold hover:text-black"
                           >
                             {label}
                           </Link>
@@ -58,7 +58,7 @@ export const Breadcrumbs = () => {
                       </>
                     )}
                     {isLast && (
-                      <li className="text-gray-500 flex items-center font-semibold">
+                      <li className="flex items-center font-semibold">
                         <span className="mx-2">{label}</span>
                       </li>
                     )}
@@ -73,4 +73,3 @@ export const Breadcrumbs = () => {
     </>
   );
 };
-

@@ -6,7 +6,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "/images/Klangrumlogga.svg";
 
 const navigation = [
-  { name: "Home", to: "/" },
+  { name: "Home", to: "/home" },
   { name: "Architecture & Design", to: "/architecture" },
   { name: "Illustrations", to: "/illustrations" },
   { name: "Music", to: "/music" },

@@ -6,11 +6,10 @@ export const BackToTop = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsVisible(window.scrollY > 300); // Show button if scrolled more than 300px
+      setIsVisible(window.scrollY > 1100);
     };
 
     window.addEventListener("scroll", handleScroll);
-    // Clean up event listener on unmount
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -23,7 +22,7 @@ export const BackToTop = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-4 right-4 z-50 cursor-pointer whitespace-pre-line rounded-full border border-black bg-yellow p-3 text-xs font-light text-black shadow-lg"
+          className="fixed bottom-4 right-4 z-50 cursor-pointer whitespace-pre-line rounded-full  bg-yellow p-3 text-xs font-light text-black shadow-lg"
           aria-label="Scroll to top"
         >
           {`Back\n to top`}

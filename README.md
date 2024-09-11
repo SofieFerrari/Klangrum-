@@ -1,8 +1,13 @@
-# Frontend part of Final Project
+Klangrum - Musik och Design
 
-This boilerplate is designed to give you a head start in your React projects, with a focus on understanding the structure and components. As a student of Technigo, you'll find this guide helpful in navigating and utilizing the repository.
+Recreating a website for Klangrum for my Portfolio.
 
-## Getting Started
+Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
-1.  Install the required dependencies using `npm install`.
-2.  Start the development server using `npm run dev`.
+## The problem
+
+Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+
+## View it live
+
+Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.

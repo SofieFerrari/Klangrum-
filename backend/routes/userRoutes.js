@@ -1,6 +1,6 @@
 import express from "express"
 
-import { User } from "../models/userSchema"
+import { User } from "../models/userSchema.js"
 
 const router = express.Router()
 
@@ -54,14 +54,17 @@ router.post("/login", async (req, res) => {
 					accessToken: user.accessToken,
 				})
 			} else {
-				res.status(401).json({ message: "Incorrect password, try again." })
+				res.status(401).json({ message: "Incorrect password, please try again." })
 			}
 		} else {
 			res.status(404).json({
-				message: "Could not find an account with this userName",
+				message: "Could not find an account with this userName, please try again",
 			})
 		}
 	} catch (error) {
 		res.status(500).json({ message: "Login failed" })
 	}
 })
+
+
+export default router;

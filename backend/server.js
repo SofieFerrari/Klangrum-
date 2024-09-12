@@ -1,7 +1,10 @@
-const express = require("express")
-const mongoose = require("mongoose")
-const cors = require("cors")
-import userRoutes from "./routes/user"
+import express from "express"
+import mongoose from "mongoose"
+import cors from "cors"
+import userRoutes from "./routes/userRoutes.js";
+import { User } from "./models/userSchema.js"
+import { Project } from "./models/projectsSchema.js"
+import dotenv from 'dotenv';
 
 dotenv.config()
 
@@ -19,10 +22,10 @@ mongoose.Promise = Promise
 
 if (process.env.RESET_DB) {
 	const seedDatabase = async () => {
-		await Projects.deleteMany()
+		await Project.deleteMany()
 
 		projectData.forEach((project) => {
-			new Projects(project).save()
+			new Project(project).save()
 		})
 	}
 	seedDatabase()

@@ -11,9 +11,9 @@ import { Illustration } from "./models/illustrationsSchema.js";
 import { Event } from "./models/eventSchema.js";
 import { Architecture } from "./models/architectureSchema.js";
 
-mongoose.connect()
-
 dotenv.config();
+
+mongoose.connect();
 
 const app = express();
 const PORT = process.env.PORT || 8080;

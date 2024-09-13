@@ -9,7 +9,7 @@ import userRoutes from "./routes/userRoutes.js";
 import { User } from "./models/userSchema.js";
 import { Illustration } from "./models/illustrationsSchema.js";
 import { EventData } from "./models/eventSchema.js";
-import { ArchitectureData } from "./models/architectureSchema.js";
+import { Architecture } from "./models/architectureSchema.js";
 
 dotenv.config();
 

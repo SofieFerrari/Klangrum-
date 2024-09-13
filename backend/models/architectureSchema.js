@@ -17,4 +17,4 @@ const architectureSchema = new Schema({
   },
 });
 
-export const ArchitechtureData = model("ArchitectureData", architectureSchema);
+export const Architechture = model("Architecture", architectureSchema);

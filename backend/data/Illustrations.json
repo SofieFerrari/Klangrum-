@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Koppartälten i Haga",
+    "image": "/jsonImages/koppartalten.jpg",
+    "technique": "Hand drawned and colored digitally"
+  },
+  {
+    "name": "Playing Games in the Pol",
+    "image": "/jsonImages/lekar.jpg",
+    "technique": "Hand drawned and colored digitally"
+  },
+  {
+    "name": "Feskekörkan",
+    "image": "/jsonImages/feskekorkan.jpg",
+    "technique": "Hand drawned and colored digitally"
+  },
+  {
+    "name": "Huvudsta Strand",
+    "image": "/jsonImages/huvudsta.jpg",
+    "technique": "Hand drawned and colored digitally"
+  },
+  {
+    "name": "Regngrammofonen",
+    "image": "/jsonImages/regn.jpg",
+    "technique": "Photo of a model. Hand drawn illustration. Colored and edited digitally"
+  },
+  {
+    "name": "Rings on the Water",
+    "image": "/jsonImages/vatten.jpg",
+    "technique": "Hand drawned and colored digitally"
+  },
+  {
+    "name": "Indian Dance",
+    "image": "/jsonImages/dans.jpg",
+    "technique": "Hand drawned and colored digitally"
+  },
+  {
+    "name": "Big Scale Drawing - Fossils",
+    "image": "/jsonImages/bigscalefanny.jpg",
+    "technique": "Cole"
+  }
+]

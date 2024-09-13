@@ -1,37 +1,68 @@
-import express from "express"
-import mongoose from "mongoose"
-import cors from "cors"
+import express from "express";
+import cors from "cors";
+import mongoose from "mongoose";
+import fs from "fs";
+import path from "path";
+import expressListEndpoints from "express-list-endpoints";
+import dotenv from "dotenv";
 import userRoutes from "./routes/userRoutes.js";
-import { User } from "./models/userSchema.js"
-import { Project } from "./models/projectsSchema.js"
-import dotenv from 'dotenv';
+import { User } from "./models/userSchema.js";
+import { Illustration } from "./models/illustrationsSchema.js";
+import { EventData } from "./models/eventSchema.js";
+import { ArchitectureData } from "./models/architectureSchema.js";
 
-dotenv.config()
+dotenv.config();
 
-const app = express()
-const PORT = process.env.PORT || 8080
+const app = express();
+const PORT = process.env.PORT || 8080;
 
 // Middleware
-app.use(cors())
-app.use(express.json()) // För att tolka JSON-data
-app.use("/users", userRoutes)
+app.use(cors());
+app.use(express.json()); // För att tolka JSON-data
+app.use("/users", userRoutes);
 
-const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/klangrum"
-mongoose.connect(mongoUrl)
-mongoose.Promise = Promise
+// MongoDB setup
+const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/klangrum";
+mongoose.connect(mongoUrl, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+mongoose.Promise = Promise;
 
+// Läs in JSON-data med fs
+const illustrationData = JSON.parse(
+  fs.readFileSync(path.resolve("data/Illustrations.json"), "utf8"),
+);
+const eventData = JSON.parse(
+  fs.readFileSync(path.resolve("data/EventData.json"), "utf8"),
+);
+const architectureData = JSON.parse(
+  fs.readFileSync(path.resolve("data/ArchitectureData.json"), "utf8"),
+);
+
+// Seed databasen
 if (process.env.RESET_DB) {
-	const seedDatabase = async () => {
-		await Project.deleteMany()
+  const seedDatabase = async () => {
+    try {
+      // Clear existing collections
+      await Illustration.deleteMany();
+      await EventData.deleteMany();
+      await ArchitectureData.deleteMany();
 
-		projectData.forEach((project) => {
-			new Project(project).save()
-		})
-	}
-	seedDatabase()
+      // Seed collections
+      await Illustration.insertMany(illustrationData);
+      await EventData.insertMany(eventData);
+      await ArchitectureData.insertMany(architectureData);
+
+      console.log("Database seeded successfully");
+    } catch (error) {
+      console.error("Error seeding database:", error);
+    }
+  };
+  seedDatabase();
 }
 
 // Starta servern
 app.listen(PORT, () => {
-	console.log(`Servern kör på port ${PORT}`)
-})
+  console.log(`Servern kör på port ${PORT}`);
+});

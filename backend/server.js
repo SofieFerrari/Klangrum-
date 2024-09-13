@@ -11,6 +11,8 @@ import { Illustration } from "./models/illustrationsSchema.js";
 import { Event } from "./models/eventSchema.js";
 import { Architecture } from "./models/architectureSchema.js";
 
+mongoose.connect()
+
 dotenv.config();
 
 const app = express();
@@ -23,10 +25,7 @@ app.use("/users", userRoutes);
 
 // MongoDB setup
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/klangrum";
-mongoose.connect(mongoUrl, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(mongoUrl);
 mongoose.Promise = Promise;
 
 // Läs in JSON-data med fs

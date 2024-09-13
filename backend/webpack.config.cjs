@@ -1,7 +1,7 @@
 import path from "path";
 
 export default {
-  entry: "./src/server.js", // Ange ingångspunkten för din backend-kod
+  entry: "./server.js", // Ange ingångspunkten för din backend-kod
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),

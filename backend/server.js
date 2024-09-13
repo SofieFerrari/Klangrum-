@@ -8,7 +8,7 @@ import dotenv from "dotenv";
 import userRoutes from "./routes/userRoutes.js";
 import { User } from "./models/userSchema.js";
 import { Illustration } from "./models/illustrationsSchema.js";
-import { EventData } from "./models/eventSchema.js";
+import { Event } from "./models/eventSchema.js";
 import { Architecture } from "./models/architectureSchema.js";
 
 dotenv.config();
@@ -46,13 +46,13 @@ if (process.env.RESET_DB) {
     try {
       // Clear existing collections
       await Illustration.deleteMany();
-      await EventData.deleteMany();
-      await ArchitectureData.deleteMany();
+      await Event.deleteMany();
+      await Architecture.deleteMany();
 
       // Seed collections
       await Illustration.insertMany(illustrationData);
-      await EventData.insertMany(eventData);
-      await ArchitectureData.insertMany(architectureData);
+      await Event.insertMany(eventData);
+      await Architecture.insertMany(architectureData);
 
       console.log("Database seeded successfully");
     } catch (error) {

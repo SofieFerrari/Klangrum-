@@ -6,8 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run dev",
-    "build": "webpack --config webpack.config.cjs",
+    "start": "node server.js",
     "dev": "nodemon server.js --exec babel-node"
   },
   "keywords": [],
@@ -15,7 +14,6 @@
   "license": "ISC",
   "dependencies": {
     "@babel/node": "^7.25.0",
-    "babel-register": "^6.26.0",
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
@@ -29,9 +27,6 @@
   "devDependencies": {
     "@babel/cli": "^7.25.6",
     "@babel/core": "^7.25.2",
-    "@babel/preset-env": "^7.25.4",
-    "webpack": "^5.94.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-node-externals": "^3.0.0"
+    "@babel/preset-env": "^7.25.4"
   }
 }

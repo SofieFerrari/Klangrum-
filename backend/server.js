@@ -23,7 +23,15 @@ app.use("/users", userRoutes);
 
 // MongoDB setup
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/klangrum";
-mongoose.connect(mongoUrl);
+mongoose
+  .connect(mongoUrl)
+  .then(() => {
+    console.log("Connected to MongoDB");
+  })
+  .catch((err) => {
+    console.error("Error connecting to MongoDB:", err);
+  });
+
 mongoose.Promise = Promise;
 
 // Läs in JSON-data med fs
@@ -37,7 +45,7 @@ const architectureData = JSON.parse(
   fs.readFileSync(path.resolve("data/ArchitectureData.json"), "utf8"),
 );
 
-// Seed databasen
+// // Seed databasen
 if (process.env.RESET_DB) {
   const seedDatabase = async () => {
     try {

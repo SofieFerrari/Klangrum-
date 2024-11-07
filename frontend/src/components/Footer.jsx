@@ -11,10 +11,12 @@ const email = "mailto:Skroder.fanny@gmail.com";
 
 export const Footer = () => {
   return (
-    <section className="flex flex-col bg-white font-montserrat">
+    <section className="font-montserrat flex flex-col bg-white">
       <img src={logga} className="my-8 h-40 w-40 self-center" />
       <a href={email}>
-        <h1 className="mb-4 text-center text-3xl font-semibold">CONTACT</h1>
+        <h1 className="mb-4 text-center text-3xl font-semibold hover:scale-105">
+          CONTACT ME
+        </h1>
       </a>
       <div className="mx-4 mb-10 flex-wrap text-center text-xl font-medium leading-8">
         <p>KLANG-RUM</p>

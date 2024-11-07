@@ -1,13 +1,23 @@
 import express from "express";
 import bcrypt from "bcrypt";
 import { User } from "../models/userSchema.js";
+import jwt from "jsonwebtoken";
+import { authenticateUserToken } from "../middleware/authenticateUserToken.js"
 
 const router = express.Router();
 
 // Register new user route
 router.post("/register", async (req, res) => {
   try {
-    const { userName, password } = req.body;
+    const { userName, email, password } = req.body;
+
+    // Kontrollera om det redan finns två användare i databasen
+    const userCount = await User.countDocuments(); // Räknar hur många användare som finns
+    if (userCount >= 2) {
+      return res.status(400).json({
+        message: "Only two users are allowed. No more users can be created.",
+      });
+    }
 
     if (!userName) {
       return res.status(400).json({ message: "Please choose a username." });
@@ -21,15 +31,26 @@ router.post("/register", async (req, res) => {
         .json({ message: "Password must be at least 8 characters long." });
     }
 
+    // Skapa och spara den nya användaren
     const user = new User({
       userName: userName,
-      password: bcrypt.hashSync(password, 10),
+      email: email,
+      password: bcrypt.hashSync(password, 10), // Kryptera lösenordet
     });
+
     await user.save();
+
+    // Skapa JWT-token för den nya användaren
+    const token = jwt.sign(
+      { userId: user._id, email: user.email },
+      process.env.JWT_SECRET,
+      { expiresIn: "1h" },
+    );
+
     res.status(201).json({
       message: `The registration was successful ${user.userName}. You are welcome to log in.`,
       id: user._id,
-      accessToken: user.accessToken,
+      accessToken: token, // Returnera token till användaren
     });
   } catch (error) {
     console.error("Register Endpoint", error);
@@ -40,17 +61,22 @@ router.post("/register", async (req, res) => {
 // Login route
 router.post("/login", async (req, res) => {
   try {
-    const { userName, password } = req.body;
+    const { email, password } = req.body;
 
-    const user = await User.findOne({ userName: userName });
+    const user = await User.findOne({ email: email });
 
     if (user) {
       const isPasswordCorrect = await bcrypt.compare(password, user.password);
       if (isPasswordCorrect) {
+        const token = jwt.sign(
+          { userId: user._id, email: user.email },
+          process.env.JWT_SECRET,
+          { expiresIn: "1h" },
+        );
         res.status(200).json({
-          message: `Welcome ${user.userName}.`,
+          message: `Welcome!`,
           id: user._id,
-          accessToken: user.accessToken,
+          accessToken: token,
         });
       } else {
         res
@@ -59,8 +85,7 @@ router.post("/login", async (req, res) => {
       }
     } else {
       res.status(404).json({
-        message:
-          "Could not find an account with this userName, please try again",
+        message: "Could not find an account with this email, please try again",
       });
     }
   } catch (error) {
@@ -89,6 +114,19 @@ router.get("/all", async (req, res) => {
       message:
         "Sorry, we couldn't retrieve users at this time. Please try again later.",
     });
+  }
+});
+
+router.get("/admin", authenticateUserToken, (req, res) => {
+  if (
+    req.user.email === "sofiestrahl@gmail.com" ||
+    req.user.email === "Skroder.fanny@gmail.com"
+  ) {
+    res.status(200).json({ message: "Välkommen till Klangrums adminsida!" });
+  } else {
+    res
+      .status(403)
+      .json({ message: "You do not have permission to access this page." });
   }
 });
 

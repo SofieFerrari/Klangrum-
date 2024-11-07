@@ -12,6 +12,7 @@ const navigation = [
   { name: "Music", to: "/music" },
   { name: "Events", to: "/events" },
   { name: "About Me", to: "/about-me" },
+  { name: "Admin", to: "/admin-login" },
 ];
 
 export const Header = () => {

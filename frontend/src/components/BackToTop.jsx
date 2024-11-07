@@ -22,7 +22,7 @@ export const BackToTop = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-4 right-4 z-50 cursor-pointer whitespace-pre-line rounded-full  bg-yellow p-3 text-xs font-medium text-black shadow-lg"
+          className="fixed bottom-4 right-4 z-50 cursor-pointer whitespace-pre-line rounded-full  bg-yellow p-3 text-xs font-montserrat font-medium text-black shadow-lg"
           aria-label="Scroll to top"
         >
           {`Back\n to top`}
